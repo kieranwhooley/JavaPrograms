@@ -27,6 +27,7 @@ public class Main {
         inchesOnly = calcFeetAndInchesToCentimetres(157);
         System.out.println(inchesOnly + "cm");
         inchesOnly = calcFeetAndInchesToCentimetres(13, 1);
+        System.out.println(inchesOnly + "cm");
     }
 
     public static double calcFeetAndInchesToCentimetres(double feet, double inches){
