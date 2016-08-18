@@ -22,6 +22,7 @@ public class Main {
         System.out.println(myAccount);
         System.out.println(myAccount.getCustomerName());
         System.out.println(myAccount.getPhoneNumber());
+        System.out.println(myAccount.getEmail());
 
         System.out.println(my2ndAccount.getCustomerName());
         System.out.println(my2ndAccount.getPhoneNumber());
