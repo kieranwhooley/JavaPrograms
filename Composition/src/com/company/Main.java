@@ -26,9 +26,10 @@ public class Main {
                 new Window(new Dimensions(15, 10, 5), "Double Glazed", "Frosted"),
                 new Wardrobe("Wood", new Dimensions(250, 125, 75)));
 
-        myRoom.OpenOrCloseWindow(false);
+        myRoom.OpenOrCloseWindow(true);
         myRoom.getHeater().turnOn(true);
         myRoom.setTemperatureInRoom(22.5);
+        myRoom.OpenOrCloseWindow(false);
 
 
 
