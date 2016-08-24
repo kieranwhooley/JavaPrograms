@@ -21,6 +21,16 @@ public class Main {
 
         thePC.powerUp();
 
+        //CHALLENGE (Bedroom, Heater, Window, Wardrobe)
+        Bedroom myRoom = new Bedroom("Single", new Heater("Illumina", "Electric"),
+                new Window(new Dimensions(15, 10, 5), "Double Glazed", "Frosted"),
+                new Wardrobe("Wood", new Dimensions(250, 125, 75)));
+
+        myRoom.OpenOrCloseWindow(false);
+        myRoom.getHeater().turnOn(true);
+        myRoom.setTemperatureInRoom(22.5);
+
+
 
     }
 }
