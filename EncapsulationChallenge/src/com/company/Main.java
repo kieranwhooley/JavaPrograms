@@ -16,10 +16,15 @@ public class Main {
         printer.printPages(3);
         printer.addMoreToner(7);
 
-        Printer printer2 = new Printer(50, false);
+       Printer printer2 = new Printer(50, false);
 
-        printer2.printPages(2);
+        printer2.printPages(100);
         printer2.addMoreToner(30);
+        printer.printPages(14);
+        printer2.addMoreToner(30);
+        printer2.addMoreToner(30);
+        printer2.addMoreToner(30);
+        System.out.println("Number of pages printed so far: " + printer.getNumberOfPagesPrinted());
 
     }
 }

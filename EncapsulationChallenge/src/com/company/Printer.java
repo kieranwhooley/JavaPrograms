@@ -10,8 +10,10 @@ public class Printer {
     private boolean duplexPrinter = false;
 
     public Printer(int tonerLevel, boolean duplexPrinter) {
-        if(tonerLevel > 0 && tonerLevel < 100) {
+        if(tonerLevel > -1 && tonerLevel <= 100) {
             this.tonerLevel = tonerLevel;
+        } else {
+            this.tonerLevel = -1;
         }
         this.duplexPrinter = duplexPrinter;
     }
@@ -42,8 +44,14 @@ public class Printer {
     }
 
     private void reduceTonerLevel (int reduceTonerBy) {
-        tonerLevel -= reduceTonerBy;
-        System.out.println("Toner level reduced to " + tonerLevel + "% after printing " + numberOfPagesPrinted + " pages");
+            tonerLevel -= reduceTonerBy;
+        if (tonerLevel <= 0) {
+            System.out.println("Toner empty. Please refill.");
+            tonerLevel = 0;
+        } else {
+            tonerLevel -= reduceTonerBy;
+            System.out.println("Toner level reduced to " + tonerLevel + "% after printing " + numberOfPagesPrinted + " pages");
+        }
     }
 
     public int getTonerLevel() {
