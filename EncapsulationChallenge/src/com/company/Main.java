@@ -25,6 +25,7 @@ public class Main {
         printer2.addMoreToner(30);
         printer2.addMoreToner(30);
         System.out.println("Number of pages printed so far: " + printer.getNumberOfPagesPrinted());
+        System.out.println("Toner level is : " + printer.getTonerLevel() + "%");
 
     }
 }
