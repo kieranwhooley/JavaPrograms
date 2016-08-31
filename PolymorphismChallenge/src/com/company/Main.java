@@ -43,8 +43,8 @@ class Car {
 }
 
 class Tesla extends Car {
-    public Tesla(){
-        super("Tesla", 8);
+    public Tesla(String name, int numberOfCylinders) {
+        super(name, numberOfCylinders);
     }
 
     public String startEngine() {
@@ -61,8 +61,8 @@ class Tesla extends Car {
 }
 
 class Canyonero extends Car {
-    public Canyonero() {
-        super("Canyonero", 20);
+    public Canyonero(String name, int numberOfCylinders) {
+        super(name, numberOfCylinders);
     }
 
     public String startEngine() {
@@ -79,8 +79,8 @@ class Canyonero extends Car {
 }
 
 class UnknownCar extends Car {
-    public UnknownCar() {
-        super("Something eastern European", 2);
+    public UnknownCar(String name, int numberOfCylinders) {
+        super(name, numberOfCylinders);
     }
 }
 public class Main {
@@ -90,14 +90,14 @@ public class Main {
         Car car = new Car("Base Car", 1);
         System.out.println(car.startEngine());
 
-        UnknownCar something = new UnknownCar();
-        System.out.println(something.getName() + " " + something.accelerate());
+        UnknownCar something = new UnknownCar("Something eastern European", 1);
+        System.out.println(something.getName() + "\n" + something.accelerate());
 
-        Car modelX = new Tesla();
-        System.out.println(modelX.brake() + " \nNumber of wheels: " + modelX.getNumberOfWheels());
+        Car modelX = new Tesla("Model-X", 8);
+        System.out.println(modelX.getName() + "\n" + modelX.brake() + " \nNumber of wheels: " + modelX.getNumberOfWheels());
 
-        Canyonero canyonero = new Canyonero();
-        System.out.println(canyonero.accelerate() + " with " + canyonero.getNumberOfCylinders() + " cylinders");
+        Canyonero canyonero = new Canyonero("Canyonero", 200);
+        System.out.println("Next car: " + canyonero.getName() + "\n" + canyonero.accelerate() + " with " + canyonero.getNumberOfCylinders() + " cylinders");
 
     }
 }
