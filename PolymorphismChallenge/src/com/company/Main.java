@@ -1,8 +1,103 @@
 package com.company;
 
+class Car {
+    private boolean engine;
+    private int numberOfWheels;
+    private String name;
+    private int numberOfCylinders;
+
+    public Car(String name, int numberOfCylinders) {
+        this.engine = true;
+        this.numberOfWheels = 4;
+        this.name = name;
+        this.numberOfCylinders = numberOfCylinders;
+    }
+
+    public String startEngine() {
+        return "Unknown car start";
+    }
+
+    public String accelerate() {
+        return "Unknown car acceleration";
+    }
+
+    public String brake() {
+        return "Unknown car braking";
+    }
+
+    public boolean isEngine() {
+        return engine;
+    }
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumberOfCylinders() {
+        return numberOfCylinders;
+    }
+}
+
+class Tesla extends Car {
+    public Tesla(){
+        super("Tesla", 8);
+    }
+
+    public String startEngine() {
+        return "Tesla started using electricity";
+    }
+
+    public String accelerate() {
+        return "Tesla speeds up thanks to the sun";
+    }
+
+    public String brake() {
+        return "Tesla braking due to lack of sunlight/electricity";
+    }
+}
+
+class Canyonero extends Car {
+    public Canyonero() {
+        super("Canyonero", 20);
+    }
+
+    public String startEngine() {
+        return "Canyonero starts with a roar";
+    }
+
+    public String accelerate() {
+        return "Squirrel-squashing, deer-smacking driving machine accelerates";
+    }
+
+    public String brake() {
+        return "Canyonero slows down for no man";
+    }
+}
+
+class UnknownCar extends Car {
+    public UnknownCar() {
+        super("Something eastern European", 2);
+    }
+}
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        Car car = new Car("Base Car", 1);
+        System.out.println(car.startEngine());
+
+        UnknownCar something = new UnknownCar();
+        System.out.println(something.getName() + " " + something.accelerate());
+
+        Car modelX = new Tesla();
+        System.out.println(modelX.brake() + " \nNumber of wheels: " + modelX.getNumberOfWheels());
+
+        Canyonero canyonero = new Canyonero();
+        System.out.println(canyonero.accelerate() + " with " + canyonero.getNumberOfCylinders() + " cylinders");
+
     }
 }
