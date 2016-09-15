@@ -15,7 +15,7 @@ public class Hamburger {
     public String sauce;*/
     public double basePrice = 2;
     public double additionalPrice = 0;
-    private int additionsAdded = 0;
+    public int additionsAdded = 0;
     //public ArrayList<String> listOfToppingsAdded;
 
     public Hamburger(String breadRollType, String meat) {
@@ -32,7 +32,7 @@ public class Hamburger {
     }
 
     public void burgerOrdered() {
-        System.out.println("Bread roll type: " + getBreadRollType() +
+        System.out.println("***HAMBURGER***\nBread roll type: " + getBreadRollType() +
                 "\nMeat type: " + getMeat() );
     }
     private double getBasePrice() {
@@ -77,26 +77,31 @@ public class Hamburger {
         int numberOfToppingsAdded = checkCountOfToppingsAdded();
         while (numberOfToppingsAdded < 4){
             if (toppingAdded.equals("tomato")){
+                System.out.println(topping + " added");
                 additionalPrice += .1;
                 additionsAdded++;
                 //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("onion")){
+                System.out.println(topping + " added");
                 additionalPrice += .2;
                 additionsAdded++;
                 //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("ketchup")){
+                System.out.println(topping + " added");
                 additionalPrice += .3;
                 additionsAdded++;
                 //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("cheese")){
+                System.out.println(topping + " added");
                 additionalPrice += .4;
                 additionsAdded++;
                 //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("beetroot")){
+                System.out.println(topping + " added");
                 additionalPrice += .5;
                 additionsAdded++;
                 //listOfToppingsAdded.add(topping);
@@ -111,7 +116,7 @@ public class Hamburger {
 
     private int checkCountOfToppingsAdded() {
         if (additionsAdded == 4){
-            System.out.println("Maximum additional toppings added");
+            System.out.println("Maximum additional toppings added to Hamburger is 4");
             return additionsAdded;
         }
         return additionsAdded;

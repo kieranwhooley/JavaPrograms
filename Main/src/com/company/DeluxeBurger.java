@@ -14,11 +14,9 @@ public class DeluxeBurger extends Hamburger {
         this.chips = chips;
     }
 
-
-
     @Override
     public void burgerOrdered() {
-        System.out.println("Bread roll type: " + getBreadRollType() +
+        System.out.println("***DELUXE BURGER***\nBread roll type: " + getBreadRollType() +
                 "\nMeat type: " + getMeat() +
         "\nDrink: " + drink + "\nChips: " + chips);
     }

@@ -25,9 +25,19 @@ public class Main {
         burger.burgerOrdered();
 
         HealthyBurger healthyBurger = new HealthyBurger("Lamb");
-        healthyBurger.addTopping("tomato");
+        healthyBurger.addTopping("Tomato");
         healthyBurger.getPrice();
         healthyBurger.burgerOrdered();
+
+        healthyBurger.addTopping("Cheese");
+        healthyBurger.addTopping("Ketchup");
+        healthyBurger.addTopping("Pineapple");
+        healthyBurger.addTopping("Onion");
+        healthyBurger.addTopping("Beetroot");
+        healthyBurger.addTopping("Tomato");
+        healthyBurger.addTopping("Cheese");
+        healthyBurger.addTopping("Cheese");
+        healthyBurger.getPrice();
 
         DeluxeBurger deluxeBurger = new DeluxeBurger("Brioche", "Chicken", "Coke", "Crinkle cut");
         deluxeBurger.burgerOrdered();
