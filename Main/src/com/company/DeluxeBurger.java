@@ -5,6 +5,7 @@ package com.company;
  */
 public class DeluxeBurger extends Hamburger {
 
+    public double basePrice = 3.00;
     private String chips;
     private String drink;
 
@@ -19,5 +20,11 @@ public class DeluxeBurger extends Hamburger {
         System.out.println("***DELUXE BURGER***\nBread roll type: " + getBreadRollType() +
                 "\nMeat type: " + getMeat() +
         "\nDrink: " + drink + "\nChips: " + chips);
+    }
+
+    public double getPrice() {
+        System.out.println("Base price: €" + basePrice + "\nIncludes drink and chips\n"
+        + "Total price: € " + basePrice);
+        return basePrice;
     }
 }
