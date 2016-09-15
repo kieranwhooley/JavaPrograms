@@ -16,6 +16,7 @@ public class Hamburger {
     public double basePrice = 2;
     public double additionalPrice = 0;
     private int additionsAdded = 0;
+    //public ArrayList<String> listOfToppingsAdded;
 
     public Hamburger(String breadRollType, String meat) {
         this.breadRollType = breadRollType;
@@ -50,9 +51,15 @@ public class Hamburger {
         return toppings;
     }*/
 
+   /*public String getListOfToppings() {
+        for (String topping : listOfToppingsAdded){
+            System.out.println(topping);
+        } return "";
+    }*/
+
     public double getPrice() {
         System.out.println("Base price: €" + getBasePrice() +
-                //"\nToppings added: " + listOfToppingsAdded() +
+                //"\nToppings added: " + getListOfToppings() +
         "\nCost of additional toppings: €" + getAdditionalPrice() +
         "\nTotal price: €" + (getBasePrice() + getAdditionalPrice()));
         return getBasePrice() + getAdditionalPrice();
@@ -72,27 +79,27 @@ public class Hamburger {
             if (toppingAdded.equals("tomato")){
                 additionalPrice += .1;
                 additionsAdded++;
-                //listOfToppingsAdded(topping);
+                //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("onion")){
                 additionalPrice += .2;
                 additionsAdded++;
-                //listOfToppingsAdded(topping);
+                //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("ketchup")){
                 additionalPrice += .3;
                 additionsAdded++;
-                //listOfToppingsAdded(topping);
+                //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("cheese")){
                 additionalPrice += .4;
                 additionsAdded++;
-               //listOfToppingsAdded(topping);
+                //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else if (toppingAdded.equals("beetroot")){
                 additionalPrice += .5;
                 additionsAdded++;
-                //listOfToppingsAdded(topping);
+                //listOfToppingsAdded.add(topping);
                 return additionalPrice;
             } else {
                 System.out.println(topping + " is not a valid topping");
