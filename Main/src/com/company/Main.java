@@ -29,6 +29,7 @@ public class Main {
         healthyBurger.getPrice();
         healthyBurger.burgerOrdered();
 
-
+        DeluxeBurger deluxeBurger = new DeluxeBurger("Brioche", "Chicken", "Coke", "Crinkle cut");
+        deluxeBurger.burgerOrdered();
         }
 }

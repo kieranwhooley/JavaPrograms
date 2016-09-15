@@ -23,11 +23,11 @@ public class Hamburger {
         this.meat = meat;
     }
 
-    private String getBreadRollType() {
+    public String getBreadRollType() {
         return breadRollType;
     }
 
-    private String getMeat() {
+    public String getMeat() {
         return meat;
     }
 
