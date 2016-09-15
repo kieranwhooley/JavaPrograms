@@ -6,6 +6,7 @@ package com.company;
 public class DeluxeBurger extends Hamburger {
 
     public double basePrice = 3.00;
+    public double additionalPrice = 0;
     private String chips;
     private String drink;
 
@@ -22,9 +23,19 @@ public class DeluxeBurger extends Hamburger {
         "\nDrink: " + drink + "\nChips: " + chips);
     }
 
+    private double getBasePrice() {
+        //System.out.println("Base price of burger: €" + basePrice);
+        return basePrice;
+    }
+
+    private double getAdditionalPrice() {
+        //System.out.println("Base price of burger: €" + additionalPrice);
+        return additionalPrice;
+    }
+
     public double getPrice() {
         System.out.println("Base price: €" + basePrice + "\nIncludes drink and chips\n"
-        + "Total price: € " + basePrice);//fix up this to calculate items to Deluxe burger
+        + "Total price: € " + basePrice);
         return basePrice;
     }
 }
