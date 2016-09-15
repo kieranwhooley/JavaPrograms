@@ -41,6 +41,12 @@ public class Main {
 
         DeluxeBurger deluxeBurger = new DeluxeBurger("Brioche", "Chicken", "Coke", "Crinkle cut");
         deluxeBurger.burgerOrdered();
+        deluxeBurger.addTopping("Cheese");
+        deluxeBurger.addTopping("Beetroot");
+        deluxeBurger.addTopping("Egg");
+        deluxeBurger.addTopping("Ketchup");
+        deluxeBurger.addTopping("Tomato");
+        deluxeBurger.addTopping("Onion");
         deluxeBurger.getPrice();
         }
 }

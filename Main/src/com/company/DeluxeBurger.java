@@ -24,7 +24,7 @@ public class DeluxeBurger extends Hamburger {
 
     public double getPrice() {
         System.out.println("Base price: €" + basePrice + "\nIncludes drink and chips\n"
-        + "Total price: € " + basePrice);
+        + "Total price: € " + basePrice);//fix up this to calculate items to Deluxe burger
         return basePrice;
     }
 }

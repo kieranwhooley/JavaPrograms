@@ -116,7 +116,7 @@ public class Hamburger {
 
     private int checkCountOfToppingsAdded() {
         if (additionsAdded == 4){
-            System.out.println("Maximum additional toppings added to Hamburger is 4");
+            System.out.println("Maximum additional toppings added to Hamburger or Deluxe Burger is 4");
             return additionsAdded;
         }
         return additionsAdded;
