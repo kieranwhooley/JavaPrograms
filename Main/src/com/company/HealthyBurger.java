@@ -4,7 +4,7 @@ package com.company;
  * Created on 15/09/2016.
  */
 public class HealthyBurger extends Hamburger{
-
+    //add in a different base price for Healthy Burger for calculations
     public HealthyBurger(String meat) {
         super("Brown rye", meat);
     }
