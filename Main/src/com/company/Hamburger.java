@@ -22,6 +22,18 @@ public class Hamburger {
         this.meat = meat;
     }
 
+    private String getBreadRollType() {
+        return breadRollType;
+    }
+
+    private String getMeat() {
+        return meat;
+    }
+
+    public void burgerOrdered() {
+        System.out.println("Bread roll type: " + getBreadRollType() +
+                "\nMeat type: " + getMeat() );
+    }
     private double getBasePrice() {
         //System.out.println("Base price of burger: €" + basePrice);
         return basePrice;
